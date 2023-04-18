@@ -12,4 +12,21 @@ def maxnum():
     print("biggest number is ",+largest )     
 maxnum()
 2. Write a Python function to sum all the numbers in a list. Sample List : (8, 2, 3, 0, 7) Expected Output : 20
+def sol():
+    total =0
+    list =[8, 2, 3, 0, 7]
+    for i in range(0, len(list)):
+        total=total +list[i]
+        print("sum of list",total)
+sol()
+3. Write a Python function to multiply all the numbers in a list. Sample List : (8, 2, 3, -1, 7) Expected Output : -336
+def mul(list):
+ num=1
+ for i in list:
+    num = num * i 
+ return num
+list=[8, 2, 3, -1, 7]
+print("multiply of list is:" ,mul(list))
+mul(list)
+    
 
