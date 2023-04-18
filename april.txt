@@ -29,4 +29,14 @@ list=[8, 2, 3, -1, 7]
 print("multiply of list is:" ,mul(list))
 mul(list)
     
+4. Write a Python program to reverse a string. Sample String : "1234abcd" Expected Output : "dcba4321"
+def reverse(str):
+    string=""
+    for i in str:
+     string=i+string
+    return string
+str="1234abcd"    
+print("original string =",str )
+print("reverse string is =",reverse(str) )
+reverse(str)   
 
