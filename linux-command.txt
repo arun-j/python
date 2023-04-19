@@ -1,2 +1,2 @@
-command for grep the installed file
+command for grep the installed file in amazon linux
 yum list installed | grep percona*
