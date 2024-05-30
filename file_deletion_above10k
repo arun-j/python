@@ -1,0 +1,27 @@
+import os
+
+def delete_files_by_size(directory, min_file_size):
+    """
+    Delete files greater than or equal to a specific size in the given directory and its subdirectories.
+
+    :param directory: Directory to search for files.
+    :param min_file_size: Minimum size of files to delete in bytes.
+    """
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            file_path = os.path.join(root, file)
+            try:
+                actual_size = os.path.getsize(file_path)
+                print(f"Checking: {file_path} (Size: {actual_size} bytes)")
+                if actual_size >= min_file_size:
+                    os.remove(file_path)
+                    print(f"Deleted: {file_path}")
+            except Exception as e:
+                print(f"Error processing file {file_path}: {e}")
+
+# Set the directory you want to search and the minimum size of files to delete
+directory_to_search = '/root/script'
+min_size_to_delete = 10240  # 10KB in bytes
+
+# Call the function to delete the files
+delete_files_by_size(directory_to_search, min_size_to_delete)
